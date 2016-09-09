@@ -291,11 +291,10 @@
 	    var i = 0;
 		document.getElementById('btn_donate').onclick = function(){
 		    i++;
-		    if(i == 1){
-		        i--;
-		        $('#donate_guide').removeClass('hidden');
+		    if(i % 2 == 0){
+		        $('#donate_guide').addClass('hidden');
 			}else{
-			    $('#donate_guide').addClass('hidden');
+			    $('#donate_guide').removeClass('hidden');
 			}
 		}
 
