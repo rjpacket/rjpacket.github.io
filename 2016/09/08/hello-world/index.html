@@ -297,8 +297,11 @@
 
 	<!-- donate script -->
 	<script type="text/javascript">
+	    var i = 0;
 		document.getElementById('btn_donate').onclick = function(){
-		    if($('#donate_guide').style.display == 'none'){
+		    i++;
+		    if(i == 1){
+		        i--;
 		        $('#donate_guide').removeClass('hidden');
 			}else{
 			    $('#donate_guide').addClass('hidden');
