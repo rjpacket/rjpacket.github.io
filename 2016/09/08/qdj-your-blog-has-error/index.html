@@ -259,7 +259,6 @@
 		<a id="btn_donate" class="btn_donate" target="_self" href="javascript:;" title="Donate 打赏"></a>
 		<span class="donate_txt">
 			&uarr;<br/>
-			If you enjoy the article, please feel free to <span class="bold">donate~</span> Thx.<br/>
 			若本文对您有帮助，<span class="bold">求打赏~</span> 谢谢您的鼓励。
 		</span>
 		<br/>
@@ -278,9 +277,10 @@
 		</a>
 
 		<span class="donate_txt">
-			Use App Alipay WeChat to scan QRCode~ Thx for your support.<br/>
-			用手机支付宝钱包微信，扫一扫即可~ 谢谢您的鼓励。<br/>
-			Or donate on Web Alipay. 也可用网页版支付宝打赏。<br/>
+			<br/>
+			用手机支付宝或微信，扫一扫即可~ 。<br/>
+			您的赞助将给楼主带来一杯午后咖啡~ 谢谢鼓励。<br/>
+			<br/>
 		</span>
 		<br/>
 	</div>
@@ -288,13 +288,11 @@
 
 	<!-- donate script -->
 	<script type="text/javascript">
-	    var i = 0;
 		document.getElementById('btn_donate').onclick = function(){
-		    i = i + 1;
-		    if(i / 2 != 0){
-			    $('#donate_guide').removeClass('hidden');
+		    if($('#donate_guide').style.disply == "display"){
+		        $('#donate_guide').addClass('hidden');
 			}else{
-			    $('#donate_guide').addClass('hidden');
+			    $('#donate_guide').removeClass('hidden');
 			}
 		}
 
