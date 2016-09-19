@@ -244,15 +244,15 @@
 <p>上面的跟项目已有的叠加在一起。</p>
 <h3 id="3-build"><a href="#3-build" class="headerlink" title="3.build"></a>3.build</h3><p>做完这些工作，接下来就是运行了，也就是<code>build</code>，这里非常的诡异，直接点绿色的三角形是没有用的，照步骤来，首先开启混淆，增加混淆语句：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">-keep <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">dodola</span>.<span class="title">rocoofix</span>.** </span>&#123;*;&#125;</div><div class="line">-keep <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">lody</span>.<span class="title">legend</span>.** </span>&#123;*;&#125;</div><div class="line">-keepclassmembers <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">dodola</span>.<span class="title">rocoosample</span>.** </span>&#123;</div><div class="line">  <span class="keyword">public</span> &lt;init&gt;();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>然后点击右边的<code>Gradle</code>下的<code>build</code>，如下截图所示：</p>
-<p><img src="/img/04/04-02.jpeg" alt=""></p>
+<p><img src="/img/04/04-02.png" alt=""></p>
 <p><code>build</code>运行完，项目<code>app</code>下会多出一个文件夹<code>rocoofix</code>，截图：</p>
-<p><img src="/img/04/04-03.jpeg" alt=""></p>
+<p><img src="/img/04/04-03.png" alt=""></p>
 <p>这是初始版本<code>version1</code>，也就是你的线上版本，接下来修改完<code>bug</code>，也就是将“heelo word！”改成“Hello world!”，然后将你的<code>appVersionCode</code>增加，保持和之前不一致就行，再打开<code>app.gradle</code>里的preVersionPath = ‘1’，<br>也就是声明这是一个补丁包，“1”是声明前一个版本，同理，继续<code>build</code>，这时候在<code>rocoofix</code>文件夹下多出来第二个子文件夹<code>version2</code>，并且多一个<code>patch.jar</code>，这就是补丁包，自动化生成的：</p>
-<p><img src="/img/04/04-05.jpeg" alt=""></p>
+<p><img src="/img/04/04-05.png" alt=""></p>
 <h3 id="4-上传补丁包，下载"><a href="#4-上传补丁包，下载" class="headerlink" title="4.上传补丁包，下载"></a>4.上传补丁包，下载</h3><p>这个过程需要后台的配合，但是可以将<code>patch.jar</code>放在<code>assets</code>文件夹下模拟下载好之后的过程：</p>
-<p><img src="/img/04/04-04.jpeg" alt=""></p>
+<p><img src="/img/04/04-04.png" alt=""></p>
 <h3 id="5-测试"><a href="#5-测试" class="headerlink" title="5.测试"></a>5.测试</h3><p>将项目改回线上版本，在Application下初始化并加载patch.jar包：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">RocooFix.initPathFromAssets(getApplicationContext(), &quot;patch.jar&quot;);</div></pre></td></tr></table></figure></p>
-<p>测试结果：<br><img src="/img/04/04-05.jpeg" alt=""></p>
+<p>测试结果：<br><img src="/img/04/04-06.jpeg" alt=""></p>
 <h3 id="注意的要点"><a href="#注意的要点" class="headerlink" title="注意的要点"></a>注意的要点</h3><p>1.build.gradle版本最好2.1.2以上</p>
 <p>2.一定要开启混淆</p>
 <p>3.application注册到manifest文件里</p>
