@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2016/9 | 小黑的博客</title>
+  <title>Hexo博客添加版权说明和打赏功能 | 小黑的博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -99,7 +99,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -210,86 +210,142 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>格子衫</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>没有格子衫你敲什么代码</p>
-                        
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/09/18/page_04/">揭开Android热更新RocooFix的神秘面纱</a></h4>
-                            
-                            <p><time datetime="2016-09-18T06:38:56.000Z"><a href="/2016/09/18/page_04/">2016-09-18</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/09/13/page_03/">实现外部url定位app某一activity进行跳转</a></h4>
-                            
-                            <p><time datetime="2016-09-13T01:19:11.000Z"><a href="/2016/09/13/page_03/">2016-09-13</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/09/12/page_02/">Hexo博客添加版权说明和打赏功能</a></h4>
-                            
-                            <p><time datetime="2016-09-12T04:59:56.000Z"><a href="/2016/09/12/page_02/">2016-09-12</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+                <h1>Hexo博客添加版权说明和打赏功能</h1>
+                <!-- 统计 -->
+                <span id="busuanzi_container_page_pv">
+                  <span class="post-meta">
+      发表于
+      <time datetime="2016-09-12T04:59:56.000Z" itemprop="datePublished">
+          2016-09-12
+      </time>
+    
+</span> | 阅读次数 <span id="busuanzi_value_page_pv"></span>
+                </span>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<hr>
+<p>本文链接：<a href="http://rjpacket.github.io/2016/09/12/page_02/">http://rjpacket.github.io/2016/09/12/page_02/</a></p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>有了格子衫你还敲什么代码</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+            <!-- 打赏 -->
+            <!-- Donate Module -->
+<div id="donate_module" style="text-align: center">
+	<!-- css -->
+	<style type="text/css">
+		.donate_bar a.btn_donate{
+			display: inline-block;
+			width: 82px;
+			height: 82px;
+			background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+			_background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+
+			<!-- 因为本 hexo 生成的博客所用的 theme 的 a:hover 带动画效果，
+				 为了在让打赏按钮显示效果正常 而 添加了以下几行 css，
+				 嵌入其它博客时不一定要它们。 -->
+			-webkit-transition: background 0s;
+			-moz-transition: background 0s;
+			-o-transition: background 0s;
+			-ms-transition: background 0s;
+			transition: background 0s;
+			<!-- /让打赏按钮的效果显示正常 而 添加的几行 css 到此结束 -->
+		}
+		.donate_bar a.btn_donate:hover{ background-position: 0px -82px;}
+		.donate_bar .donate_txt {
+			display: block;
+			color: #9d9d9d;
+			font: 14px/2 "Microsoft Yahei";
+		}
+		.bold{ font-weight: bold; }
+	</style>
+	<!-- /css -->
+
+	<!-- btn_donate & tips -->
+	<div id="donate_board" class="donate_bar center">
+		<a id="btn_donate" class="btn_donate" target="_self" href="javascript:;" title="Donate 打赏"></a>
+		<span class="donate_txt">
+			&uarr;<br/>
+			若本文对您有帮助，<span class="bold">求打赏~</span> 谢谢您的鼓励。
+		</span>
+		<br/>
+	</div>
+	<!-- /btn_donate & tips -->
+
+	<!-- donate guide -->
+	<div id="donate_guide" class="donate_bar center hidden">
+
+		<a href="http://7vzp68.com1.z0.glb.clouddn.com/about/ali_pay_02.jpg" title="Alipay_Scan_Payment" class="fancybox" rel="article0">
+			<img src="http://7vzp68.com1.z0.glb.clouddn.com/about/ali_pay_02.jpg" title="Donate 打赏" height="164px" width="164px"/>
+		</a> &nbsp;
+
+		<a href="http://7vzp68.com1.z0.glb.clouddn.com/about_original/wechat_pay_01.jpg" title="WeChat_Scan_Payment" class="fancybox" rel="article0">
+			<img src="http://7vzp68.com1.z0.glb.clouddn.com/about_original/wechat_pay_01.jpg" title="Donate 打赏" height="164px" width="auto"/>
+		</a>
+
+		<span class="donate_txt">
+			<br/>
+			用手机支付宝或微信，扫一扫即可~ 。<br/>
+			您的赞助将给楼主带来一杯午后咖啡~ 谢谢鼓励。<br/>
+			<br/>
+		</span>
+		<br/>
+	</div>
+	<!-- /donate guide -->
+
+	<!-- donate script -->
+	<script type="text/javascript">
+	    var i = 0;
+		document.getElementById('btn_donate').onclick = function(){
+		    i++;
+		    if(i % 2 == 0){
+		        $('#donate_guide').addClass('hidden');
+			}else{
+			    $('#donate_guide').removeClass('hidden');
+			}
+		}
+
+	</script>
+	<!-- /donate script -->
+</div>
+<!-- /Donate Module -->
         </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/09/13/page_03/" style="float: left;">
+        ← 实现外部url定位app某一activity进行跳转
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/09/08/page_01/">
+        Hello World →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/09/12/page_02/" data-title="Hexo博客添加版权说明和打赏功能" data-url="http://rjpacket.github.io/2016/09/12/page_02/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"rjpacket"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
