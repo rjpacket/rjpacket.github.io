@@ -6,19 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>实现外部url定位app某一activity进行跳转 | 小黑的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="为什么实现url跳转实际是为了方便h5页面浏览器打开的时候进行跳转，或者推送消息打开指定的页面。有一个缺陷就是打开的页面是独立的，点击返回就直接退出app了，如果想点击返回回到app首页，就需要两次跳转，读者要是有什么好的方法，可以在下面留言告诉我。
-1.导入依赖库，配置文件在project下的build.gradle中添加12345buildscript &amp;#123;    dependenci">
+  <meta name="description" content="为什么实现url跳转实际是为了方便h5页面浏览器打开的时候进行跳转，或者推送消息打开指定的页面。有一个缺陷就是打开的页面是独立的，点击返回就直接退出app了，如果想点击返回回到app首页，就需要两次跳转，读者要是有什么好的方法，可以在下面留言告诉我。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实现外部url定位app某一activity进行跳转">
 <meta property="og:url" content="http://rjpacket.github.io/2016/09/13/page_03/index.html">
 <meta property="og:site_name" content="小黑的博客">
-<meta property="og:description" content="为什么实现url跳转实际是为了方便h5页面浏览器打开的时候进行跳转，或者推送消息打开指定的页面。有一个缺陷就是打开的页面是独立的，点击返回就直接退出app了，如果想点击返回回到app首页，就需要两次跳转，读者要是有什么好的方法，可以在下面留言告诉我。
-1.导入依赖库，配置文件在project下的build.gradle中添加12345buildscript &amp;#123;    dependenci">
-<meta property="og:updated_time" content="2016-09-13T07:40:53.260Z">
+<meta property="og:description" content="为什么实现url跳转实际是为了方便h5页面浏览器打开的时候进行跳转，或者推送消息打开指定的页面。有一个缺陷就是打开的页面是独立的，点击返回就直接退出app了，如果想点击返回回到app首页，就需要两次跳转，读者要是有什么好的方法，可以在下面留言告诉我。">
+<meta property="og:updated_time" content="2016-09-20T04:37:41.579Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实现外部url定位app某一activity进行跳转">
-<meta name="twitter:description" content="为什么实现url跳转实际是为了方便h5页面浏览器打开的时候进行跳转，或者推送消息打开指定的页面。有一个缺陷就是打开的页面是独立的，点击返回就直接退出app了，如果想点击返回回到app首页，就需要两次跳转，读者要是有什么好的方法，可以在下面留言告诉我。
-1.导入依赖库，配置文件在project下的build.gradle中添加12345buildscript &amp;#123;    dependenci">
+<meta name="twitter:description" content="为什么实现url跳转实际是为了方便h5页面浏览器打开的时候进行跳转，或者推送消息打开指定的页面。有一个缺陷就是打开的页面是独立的，点击返回就直接退出app了，如果想点击返回回到app首页，就需要两次跳转，读者要是有什么好的方法，可以在下面留言告诉我。">
   
     <link rel="alternative" href="/atom.xml" title="小黑的博客" type="application/atom+xml">
   
@@ -159,6 +156,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="为什么实现url跳转"><a href="#为什么实现url跳转" class="headerlink" title="为什么实现url跳转"></a>为什么实现url跳转</h2><p>实际是为了方便<code>h5</code>页面浏览器打开的时候进行跳转，或者推送消息打开指定的页面。有一个缺陷就是打开的页面是独立的，点击返回就直接退出<code>app</code>了，如果想点击返回回到<code>app</code>首页，就需要两次跳转，读者要是有什么好的方法，可以在下面留言告诉我。</p>
+<a id="more"></a>
 <h3 id="1-导入依赖库，配置文件"><a href="#1-导入依赖库，配置文件" class="headerlink" title="1.导入依赖库，配置文件"></a>1.导入依赖库，配置文件</h3><p>在<code>project</code>下的<code>build.gradle</code>中添加<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">buildscript</span> &#123;</div><div class="line">    <span class="keyword">dependencies</span> &#123;</div><div class="line">        <span class="keyword">classpath</span> <span class="string">'com.neenbedankt.gradle.plugins:android-apt:1.7'</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>在<code>app</code>下的<code>build.gradle</code>中添加依赖<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">dependencies</span> &#123;</div><div class="line">    apt <span class="string">'com.github.mzule.activityrouter:compiler:1.1.1'</span></div><div class="line">    <span class="keyword">compile</span> <span class="string">'com.github.mzule.activityrouter:activityrouter:1.1.1'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p><code>rebuild</code>,完成导入。</p>
